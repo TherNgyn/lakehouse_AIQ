@@ -1,5 +1,5 @@
 # Change the default theme to be use when building the site with Hugo
-baseURL = "https://therngyn.github.io/lakehouse_AIQ/"
+
 theme = "hugo-theme-learn"
 
 # For search functionality
