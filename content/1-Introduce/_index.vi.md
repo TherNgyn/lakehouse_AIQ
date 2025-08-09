@@ -1,22 +1,57 @@
 ---
-title : "Giới thiệu"
-date: 2025-08-09
+title : "Giới thiệu"
+date: 2025-08-10
 weight : 1 
 chapter : false
 pre : " <b> 1. </b> "
 ---
-**Session Manager** là một chức năng nằm trong dịch vụ System Manager của AWS, Session Manager cung cấp khả năng quản lý các máy chủ một cách an toàn mà **không cần mở port SSH, không cần Bastion Host hoặc quản lý SSH key**. 
-Session Manager cũng giúp dễ dàng tuân thủ các chính sách của công ty yêu cầu quyền truy cập có kiểm soát, đảm bảo việc bảo mật nghiêm ngặt và ghi log truy việc truy cập trong khi vẫn cung cấp cho người dùng cuối quyền truy cập đa nền tảng.
 
-Với việc sử dụng Session Manager, bạn sẽ có được những ưu điểm sau:
+## Kiến trúc Lakehouse và chỉ số AIQ
 
-- Không cần phải mở cổng 22 cho giao thức SSH.
-- Có thể cấu hình để kết nối không cần đi ra ngoài internet.
-- Không cần quản lý private key của server để kết nối SSH.
-- Quản lý tập trung được user bằng việc sử dụng AWS IAM.
-- Truy cập tới server một cách dễ dàng và đơn giản bằng một cú click chuột.
-- Thời gian truy cập nhanh chóng hơn các phương thức truyền thống như SSH.
-- Hỗ trợ nhiều hệ điều hành khác nhau như Linux, Windows, MacOS.
-- Log lại được các phiên kết nối và các câu lệnh đã thực thi trong lúc kết nối tới server.
+**Kiến trúc Lakehouse** là một mô hình kiến trúc dữ liệu hiện đại kết hợp những ưu điểm của cả **Data Warehouse** và **Data Lake**. Mô hình này mang lại hiệu quả cao trong việc xử lý dữ liệu có cấu trúc và không có cấu trúc, đồng thời hỗ trợ các tính năng như:
 
-Với những ưu điểm trên, bạn có thể sử dụng Session Manager thay vì sử dụng kỹ thuật Bastion host giúp chúng ta tiết kiệm được thời gian và chi phí khi quản lý server Bastion.
+- **Quản lý giao dịch ACID**: Đảm bảo tính toàn vẹn dữ liệu
+- **Quản lý schema**: Hỗ trợ việc khai báo và thực thi schema
+- **Hỗ trợ BI**: Khả năng tương tác trực tiếp với các công cụ Business Intelligence
+- **Khả năng xử lý dữ liệu mở**: Có thể lưu trữ và xử lý nhiều loại dữ liệu khác nhau
+- **Hỗ trợ các công cụ Data Science**: Tích hợp tốt với các framework machine learning và data science
+
+### Chỉ số AIQ - AI Quality Index
+
+**AIQ (AI Quality Index)** là một chỉ số đánh giá chất lượng và mức độ áp dụng AI trong các quy trình nghiệp vụ. Chỉ số này giúp các doanh nghiệp:
+
+1. Đánh giá mức độ trưởng thành trong việc ứng dụng AI
+2. Phân tích hiệu quả của các hệ thống AI đang sử dụng
+3. So sánh và đối chiếu với các tiêu chuẩn ngành
+4. Xác định các lĩnh vực cần cải thiện
+
+### Tại sao cần Lakehouse cho đánh giá AIQ?
+
+Đánh giá chỉ số AIQ đòi hỏi việc phân tích dữ liệu từ nhiều nguồn khác nhau, bao gồm:
+- Dữ liệu cảm biến IoT (time-series)
+- Dữ liệu giao dịch (structured)
+- Dữ liệu hệ thống (logs)
+- Dữ liệu phi cấu trúc (văn bản, hình ảnh)
+
+Kiến trúc Lakehouse cung cấp nền tảng lý tưởng để:
+- Thu thập dữ liệu từ nhiều nguồn khác nhau
+- Lưu trữ dữ liệu thô một cách kinh tế
+- Xử lý và chuyển đổi dữ liệu theo từng giai đoạn (Bronze → Silver → Gold → Platinum)
+- Hỗ trợ phân tích dữ liệu chuyên sâu
+- Cung cấp dữ liệu cho các công cụ trực quan hóa
+
+### Tổng quan giải pháp
+
+Workshop này sẽ hướng dẫn xây dựng một kiến trúc Lakehouse trên AWS với các thành phần sau:
+
+![Kiến trúc Lakehouse](../images/lakehouse-architecture.png)
+
+Trong workshop này, bạn sẽ:
+1. Thiết lập một môi trường thu thập dữ liệu từ cảm biến IoT
+2. Xây dựng quy trình thu thập và chuyển đổi dữ liệu
+3. Thiết kế lớp lưu trữ dữ liệu theo mô hình Delta Lake
+4. Xây dựng các job xử lý dữ liệu
+5. Thiết lập môi trường phân tích dữ liệu
+6. Xây dựng bảng điều khiển đánh giá chỉ số AIQ
+
+Hãy bắt đầu với việc chuẩn bị môi trường phát triển!
