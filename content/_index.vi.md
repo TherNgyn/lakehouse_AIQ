@@ -10,7 +10,7 @@ chapter : false
 
  Trong bài lab này, bạn sẽ tìm hiểu các khái niệm cơ bản và thực hành về Amazon System Manager - Session Management. Thực hành tạo kết nối đến máy chủ public và máy chủ private trong VPC.
 
-![ConnectPrivate](/images/arc-log.png) 
+![ConnectPrivate](./images/arc-log.png) 
 
 ### Nội dung
 

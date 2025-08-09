@@ -10,7 +10,7 @@ chapter : false
  In this lab, you'll learn the basics and practice of Amazon  System Manager - Session Manager
 . Perform creating public and private instance connections. 
 
-![ConnectPrivate](images/arc-log.png) 
+![ConnectPrivate](./images/arc-log.png) 
 
 ### Content
  1. [Introduction ](1-introduce/)
