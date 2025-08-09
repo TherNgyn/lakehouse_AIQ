@@ -12,7 +12,7 @@ pre : " <b> 2.1.1 </b> "
    + Click **Your VPC**.
    + Click **Create VPC**.
 
-![VPC](/images/2.prerequisite/001-createvpc.png)
+![VPC](images\2.prerequisite\001-createvpc.png)
 
 2. At the **Create VPC** page.
    + In the **Name tag** field, enter **Lab VPC**.
