@@ -15,7 +15,7 @@ home = [ "HTML", "RSS", "JSON"]
   showVisitedLinks = true
   disableBreadcrumb = false
   disableNextPrev = false
-  baseURL = "https://therngyn.github.io/lakehouse_AIQ/"
+  baseURL = "https://therngyn.github.io/"
   
 [Languages]
 [Languages.en]
